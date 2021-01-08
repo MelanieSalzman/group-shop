@@ -3,9 +3,7 @@ import './styles.css'
 
 const Banner = () => {
   return (
-    <div className='banner'>
-      <img src='https://placehold.co/1440x380' alt='banner' />
-    </div>
+    <img src='https://placehold.co/1440x380' alt='banner' />
   )
 }
 

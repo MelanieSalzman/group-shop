@@ -1,16 +1,24 @@
 import React from 'react'
 import './styles.css'
+import PropTypes from 'prop-types'
 
-const GroupOccupancy = ({ product }) => {
-  const { occupancyPercent, occupancy, groupQty } = product
-
+const GroupOccupancy = ({
+  occupancyPercentage,
+  groupCapacity,
+  suscriptorsNumber
+}) => {
   return (
-    <div>
-      <h5>{occupancyPercent}</h5>
-      <h5>{occupancy}</h5>
-      <h5>{groupQty}</h5>
+    <div className='occupancyStatus'>
+      <h5>{occupancyPercentage} %</h5>
+      <h5>{suscriptorsNumber}/{groupCapacity} agrupados</h5>
     </div>
   )
+}
+
+GroupOccupancy.propTypes = {
+  occupancyPercentage: PropTypes.number,
+  groupCapacity: PropTypes.number,
+  suscriptorsNumber: PropTypes.number
 }
 
 export default GroupOccupancy
