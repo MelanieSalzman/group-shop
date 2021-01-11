@@ -4,11 +4,11 @@ import ProductListContainer from '../ProductListContainer'
 
 const fakeCategoryList = [
   {
-    categoryTitle: 'Ultima Chance!',
+    categoryTitle: 'Última chance!',
     productIds: [1, 2, 3, 4]
   },
   {
-    categoryTitle: 'Los mas populares',
+    categoryTitle: 'Los más populares',
     productIds: [1, 2, 3, 4]
   },
   {
@@ -27,7 +27,7 @@ const fakeCategoryList = [
 
 const CategoryListContainer = () => {
   return (
-    <div>
+    <div className='categoryListContainer'>
       {
         fakeCategoryList.map(({ categoryTitle, productIds }, index) => {
           return (

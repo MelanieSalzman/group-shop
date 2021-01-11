@@ -1,12 +1,13 @@
 import React from 'react'
 import './styles.css'
 import PropTypes from 'prop-types'
+import clock from '../../assets/images/clock.svg'
 
 const Timer = ({ expirationDate }) => {
   return (
     <div className='timer'>
-      <img src='https://placehold.co/15x15' alt='clock' className='clock' />
-      <h4>{expirationDate}</h4>
+      <img src={clock} alt='clock' className='clock' />
+      <p className='remainingTime'>{expirationDate}</p>
     </div>
   )
 }

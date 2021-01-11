@@ -2,11 +2,15 @@ import React from 'react'
 import ProductCard from '../ProductCard'
 import './styles.css'
 import PropTypes from 'prop-types'
+import firstProductUrl from '../../assets/images/product1.svg'
+import secondProductUrl from '../../assets/images/product2.svg'
+import thirdProductUrl from '../../assets/images/product3.svg'
+import fourProductUrl from '../../assets/images/product4.svg'
 
 const fakeProductList = [
   {
     id: 1,
-    productPhotoURL: 'https://placehold.co/308x210',
+    productPhotoURL: firstProductUrl,
     listPrice: 100,
     discountedPrice: 80,
     description: 'Este es un producto',
@@ -19,7 +23,7 @@ const fakeProductList = [
   },
   {
     id: 2,
-    productPhotoURL: 'https://placehold.co/308x210',
+    productPhotoURL: secondProductUrl,
     listPrice: 100,
     discountedPrice: 80,
     description: 'Este es un producto',
@@ -32,7 +36,7 @@ const fakeProductList = [
   },
   {
     id: 3,
-    productPhotoURL: 'https://placehold.co/308x210',
+    productPhotoURL: thirdProductUrl,
     listPrice: 100,
     discountedPrice: 80,
     description: 'Este es un producto',
@@ -45,7 +49,46 @@ const fakeProductList = [
   },
   {
     id: 4,
-    productPhotoURL: 'https://placehold.co/308x210',
+    productPhotoURL: fourProductUrl,
+    listPrice: 100,
+    discountedPrice: 80,
+    description: 'Este es un producto',
+    colors: 'rojo, verde, negro',
+    occupancyPercentage: 50,
+    groupCapacity: 10,
+    suscriptorsNumber: 5,
+    expirationDate: new Date().toLocaleTimeString(),
+    discountPercentage: 20
+  },
+  {
+    id: 5,
+    productPhotoURL: fourProductUrl,
+    listPrice: 100,
+    discountedPrice: 80,
+    description: 'Este es un producto',
+    colors: 'rojo, verde, negro',
+    occupancyPercentage: 50,
+    groupCapacity: 10,
+    suscriptorsNumber: 5,
+    expirationDate: new Date().toLocaleTimeString(),
+    discountPercentage: 20
+  },
+  {
+    id: 6,
+    productPhotoURL: fourProductUrl,
+    listPrice: 100,
+    discountedPrice: 80,
+    description: 'Este es un producto',
+    colors: 'rojo, verde, negro',
+    occupancyPercentage: 50,
+    groupCapacity: 10,
+    suscriptorsNumber: 5,
+    expirationDate: new Date().toLocaleTimeString(),
+    discountPercentage: 20
+  },
+  {
+    id: 7,
+    productPhotoURL: fourProductUrl,
     listPrice: 100,
     discountedPrice: 80,
     description: 'Este es un producto',
@@ -88,6 +131,7 @@ const ProductListContainer = ({ productIds, featuredProductId }) => {
             expirationDate={expirationDate}
             discountPercentage={discountPercentage}
             extended={id === featuredProductId}
+            className='productCard'
           />))
       }
     </div>

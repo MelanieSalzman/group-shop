@@ -5,13 +5,13 @@ import CategoryListContainer from '../../components/CategoryListContainer'
 import './styles.css'
 
 const Home = () => {
-  return (
-    <div>
-      <Navbar />
-      <Banner />
-      <CategoryListContainer />
-    </div>
-  )
+    return (
+        <>
+            <Navbar />
+            <Banner />
+            <CategoryListContainer />
+        </>
+    )
 }
 
 export default Home

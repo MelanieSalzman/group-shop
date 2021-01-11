@@ -18,20 +18,26 @@ const ProductCard = ({
   extended
 }) => {
   return (
-    <div>
-      <img src={productPhotoURL} alt='Product' />
-      <Timer expirationDate={expirationDate} />
-      <div className='discountBadge'>
-        <h6>Hasta un</h6>
-        <h4>{discountPercentage} %</h4>
+    <div className='productCard'>
+      <div className='imageContainer'>
+        <img src={productPhotoURL} alt='Product' className='productImage' />
+        <div className='timerContainer'>
+          <Timer expirationDate={expirationDate} />
+        </div>
+        <div className='discountBadge'>
+          <p className='discountText'>Hasta un</p>
+          <p className='discountPercentage'>{discountPercentage} %</p>
+        </div>
       </div>
-      <div className='price'>
-        <p className='priceWithDiscount'>${discountedPrice}</p>
-        <h2>${listPrice}</h2>
+      <div className='productDetails'>
+        <div className='cost'>
+          <p className='discountedPrice'>${discountedPrice}</p>
+          <p className='listPrice'>${listPrice}</p>
+        </div>
+        <p>{description}</p>
+        <p className='colors'>Color: {colors}</p>
+        <GroupOccupancy groupCapacity={groupCapacity} suscriptorsNumber={suscriptorsNumber} occupancyPercentage={occupancyPercentage} />
       </div>
-      <p>{description}</p>
-      Color: {colors}
-      <GroupOccupancy groupCapacity={groupCapacity} suscriptorsNumber={suscriptorsNumber} occupancyPercentage={occupancyPercentage} />
     </div>
   )
 }

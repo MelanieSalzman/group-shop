@@ -1,9 +1,10 @@
 import React from 'react'
 import './styles.css'
+import banner from '../../assets/images/banner.svg'
 
 const Banner = () => {
   return (
-    <img src='https://placehold.co/1440x380' alt='banner' />
+    <img src={banner} alt='banner' className='banner' />
   )
 }
 
