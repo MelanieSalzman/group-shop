@@ -55,14 +55,32 @@ const fakeProductList = [
     suscriptorsNumber: 5,
     expirationDate: new Date().toLocaleTimeString(),
     discountPercentage: 20
+  },
+  {
+    id: 5,
+    productPhotoURL: 'https://placehold.co/308x210',
+    listPrice: 100,
+    discountedPrice: 80,
+    description: 'Deberia aparecer en la primer lista y tercera',
+    colors: 'rojo, verde, negro',
+    occupancyPercentage: 50,
+    groupCapacity: 10,
+    suscriptorsNumber: 5,
+    expirationDate: new Date().toLocaleTimeString(),
+    discountPercentage: 20
   }
 ]
+
+const getProductsFilteredById = (productIds) => {
+  return fakeProductList.filter(product => productIds.includes(product.id))
+}
 
 const ProductListContainer = ({ productIds, featuredProductId }) => {
   return (
     <div className='cards'>
       {
-        fakeProductList.map(({
+
+        getProductsFilteredById(productIds).map(({
           id,
           productPhotoURL,
           listPrice,

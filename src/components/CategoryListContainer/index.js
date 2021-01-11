@@ -5,7 +5,7 @@ import ProductListContainer from '../ProductListContainer'
 const fakeCategoryList = [
   {
     categoryTitle: 'Ultima Chance!',
-    productIds: [1, 2, 3, 4]
+    productIds: [2, 3, 4, 5]
   },
   {
     categoryTitle: 'Los mas populares',
@@ -13,7 +13,7 @@ const fakeCategoryList = [
   },
   {
     categoryTitle: 'Compra en dúo',
-    productIds: [1, 2, 3, 4]
+    productIds: [2, 3, 4, 5]
   },
   {
     categoryTitle: 'Grupos pequeños',
