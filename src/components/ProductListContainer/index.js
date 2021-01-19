@@ -2,6 +2,7 @@ import React from 'react'
 import ProductCard from '../ProductCard'
 import './styles.css'
 import PropTypes from 'prop-types'
+// new Date().toLocaleTimeString()
 
 const fakeProductList = [
   {
@@ -14,7 +15,7 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
+    expirationDate: '2021-04-04T16:00:00.000Z',
     discountPercentage: 20
   },
   {
@@ -27,7 +28,7 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
+    expirationDate: '2021-04-04T16:00:00.000Z',
     discountPercentage: 20
   },
   {
@@ -40,7 +41,7 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
+    expirationDate: '2021-01-20T16:00:00.000Z',
     discountPercentage: 20
   },
   {
@@ -53,7 +54,7 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
+    expirationDate: '2021-04-04T16:00:00.000Z',
     discountPercentage: 20
   },
   {
@@ -66,7 +67,7 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
+    expirationDate: '2021-01-19T16:00:00.000Z',
     discountPercentage: 20
   }
 ]
