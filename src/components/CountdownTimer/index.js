@@ -12,7 +12,7 @@ const CountdownTimer = ({ timeLeft }) => {
 }
 
 CountdownTimer.propTypes = {
-  expirationDate: PropTypes.string
+  timeLeft: PropTypes.string
 }
 
 export default CountdownTimer

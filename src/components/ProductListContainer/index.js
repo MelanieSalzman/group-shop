@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import dayjs from 'dayjs'
 
 import ProductCard from '../ProductCard'
 
@@ -16,7 +17,7 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: '2021-04-04T16:00:00.000Z',
+    expirationDate: dayjs().add(7, 'day').toISOString(),
     discountPercentage: 20
   },
   {
@@ -29,7 +30,7 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: '2021-04-04T16:00:00.000Z',
+    expirationDate: dayjs().add(1, 'minute').toISOString(),
     discountPercentage: 20
   },
   {
@@ -42,7 +43,7 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: '2021-01-23T16:00:00.000Z',
+    expirationDate: dayjs().add(1, 'day').toISOString(),
     discountPercentage: 20
   },
   {
@@ -55,7 +56,7 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: '2021-04-04T16:00:00.000Z',
+    expirationDate: dayjs().add(2, 'day').toISOString(),
     discountPercentage: 20
   },
   {
@@ -68,7 +69,7 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: '2021-01-23T16:00:00.000Z',
+    expirationDate: dayjs().add(1, 'month').toISOString(),
     discountPercentage: 20
   }
 ]

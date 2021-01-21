@@ -9,25 +9,23 @@ import CountdownTimer from '../CountdownTimer'
 
 import './styles.module.css'
 
+const getFormattedTimeLeft = (expirationDate) => {
+  const timeLeftInDuration = getTimeLeftInDuration(expirationDate)
+  if (timeLeftInDuration.asMilliseconds() <= 0) return '00:00:00'
+  if (timeLeftInDuration.asDays() > 1) return getRelativeTimeToExpirationTime(expirationDate)
+
+  return getDurationTimeInHHMMSSFormat(timeLeftInDuration)
+}
+
 const CountdownTimerContainer = ({ expirationDate }) => {
-  const [timeLeft, setTimeLeft] = useState('00:00:00')
-
-  const setTimeFormatted = (expirationDate) => {
-    const timeLeftInDuration = getTimeLeftInDuration(expirationDate)
-    let time = ''
-    if (timeLeftInDuration.asDays() > 1) {
-      time = getRelativeTimeToExpirationTime(expirationDate)
-    } else {
-      time = getDurationTimeInHHMMSSFormat(timeLeftInDuration)
-    }
-
-    return timeLeft !== 0 ? () => setTimeLeft(time) : finishTimer()
-  }
+  const [timeLeft, setTimeLeft] = useState(() => getFormattedTimeLeft(expirationDate))
 
   useEffect(() => {
-    const timer = setInterval(setTimeFormatted(expirationDate), 1000)
-    return () => clearInterval(timer)
-  })
+    const calculateAndSetTimeLeft = () => setTimeLeft(getFormattedTimeLeft(expirationDate))
+    const intervalID = setInterval(calculateAndSetTimeLeft, 1000)
+
+    return () => clearInterval(intervalID)
+  }, [expirationDate])
 
   return (
     <CountdownTimer timeLeft={timeLeft} />
@@ -47,10 +45,6 @@ const getDurationTimeInHHMMSSFormat = (timeLeftInDuration) => {
 const getRelativeTimeToExpirationTime = (expirationTime) => {
   const now = dayjs()
   return dayjs(now).to(expirationTime)
-}
-
-const finishTimer = () => {
-  return null
 }
 
 dayjs.extend(duration)
