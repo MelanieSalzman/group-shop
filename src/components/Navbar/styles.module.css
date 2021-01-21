@@ -1,0 +1,9 @@
+.navbar {
+  display: flex;
+  height: 76px;
+}
+
+.links {
+  justify-content: right;
+  align-content: center;
+}

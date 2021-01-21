@@ -1,12 +1,13 @@
 import React from 'react'
-import ProductCard from '../ProductCard'
-import './styles.css'
 import PropTypes from 'prop-types'
-// new Date().toLocaleTimeString()
+
+import ProductCard from '../ProductCard'
+
+import classes from './styles.module.css'
 
 const fakeProductList = [
   {
-    id: 1,
+    id: '1',
     productPhotoURL: 'https://placehold.co/308x210',
     listPrice: 100,
     discountedPrice: 80,
@@ -19,7 +20,7 @@ const fakeProductList = [
     discountPercentage: 20
   },
   {
-    id: 2,
+    id: '2',
     productPhotoURL: 'https://placehold.co/308x210',
     listPrice: 100,
     discountedPrice: 80,
@@ -32,7 +33,7 @@ const fakeProductList = [
     discountPercentage: 20
   },
   {
-    id: 3,
+    id: '3',
     productPhotoURL: 'https://placehold.co/308x210',
     listPrice: 100,
     discountedPrice: 80,
@@ -41,11 +42,11 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: '2021-01-20T16:00:00.000Z',
+    expirationDate: '2021-01-23T16:00:00.000Z',
     discountPercentage: 20
   },
   {
-    id: 4,
+    id: '4',
     productPhotoURL: 'https://placehold.co/308x210',
     listPrice: 100,
     discountedPrice: 80,
@@ -58,7 +59,7 @@ const fakeProductList = [
     discountPercentage: 20
   },
   {
-    id: 5,
+    id: '5',
     productPhotoURL: 'https://placehold.co/308x210',
     listPrice: 100,
     discountedPrice: 80,
@@ -67,7 +68,7 @@ const fakeProductList = [
     occupancyPercentage: 50,
     groupCapacity: 10,
     suscriptorsNumber: 5,
-    expirationDate: '2021-01-19T16:00:00.000Z',
+    expirationDate: '2021-01-23T16:00:00.000Z',
     discountPercentage: 20
   }
 ]
@@ -78,7 +79,7 @@ const getProductsFilteredById = (productIds) => {
 
 const ProductListContainer = ({ productIds, featuredProductId }) => {
   return (
-    <div className='cards'>
+    <div className={classes.cards}>
       {
 
         getProductsFilteredById(productIds).map(({
@@ -114,7 +115,7 @@ const ProductListContainer = ({ productIds, featuredProductId }) => {
 }
 
 ProductListContainer.propTypes = {
-  productIds: PropTypes.arrayOf(PropTypes.number),
+  productIds: PropTypes.arrayOf(PropTypes.string),
   featuredProductId: PropTypes.number
 }
 

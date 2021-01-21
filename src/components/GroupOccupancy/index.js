@@ -1,6 +1,7 @@
 import React from 'react'
-import './styles.css'
 import PropTypes from 'prop-types'
+
+import './styles.module.css'
 
 const GroupOccupancy = ({
   occupancyPercentage,
@@ -8,7 +9,7 @@ const GroupOccupancy = ({
   suscriptorsNumber
 }) => {
   return (
-    <div className='occupancyStatus'>
+    <div>
       <h5>{occupancyPercentage} %</h5>
       <h5>{suscriptorsNumber}/{groupCapacity} agrupados</h5>
     </div>

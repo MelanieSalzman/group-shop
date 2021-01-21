@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import './styles.css'
 import PropTypes from 'prop-types'
-import CountdownTimer from '../CountdownTimer'
 import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import updateLocale from 'dayjs/plugin/updateLocale'
+
+import CountdownTimer from '../CountdownTimer'
+
+import './styles.module.css'
 
 const CountdownTimerContainer = ({ expirationDate }) => {
   const [timeLeft, setTimeLeft] = useState('00:00:00')
@@ -65,7 +67,7 @@ dayjs.updateLocale('en', {
     h: 'una hora',
     hh: '%d horas',
     d: 'Queda un día',
-    dd: '%d días',
+    dd: 'Quedan %d días',
     M: 'Queda un mes',
     MM: 'Quedan %d meses',
     y: 'un año',

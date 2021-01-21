@@ -1,8 +1,10 @@
 import React from 'react'
-import GroupOccupancy from '../GroupOccupancy'
-import './styles.css'
 import PropTypes from 'prop-types'
+
+import GroupOccupancy from '../GroupOccupancy'
 import CountdownTimerContainer from '../CountdownTimerContainer'
+
+import './styles.module.css'
 
 const ProductCard = ({
   productPhotoURL,
@@ -19,14 +21,14 @@ const ProductCard = ({
 }) => {
   return (
     <div>
-      <img src={productPhotoURL} alt='Product' />
+      <img src={productPhotoURL} alt='' />
       <CountdownTimerContainer expirationDate={expirationDate} />
-      <div className='discountBadge'>
+      <div>
         <h6>Hasta un</h6>
         <h4>{discountPercentage} %</h4>
       </div>
-      <div className='price'>
-        <p className='priceWithDiscount'>${discountedPrice}</p>
+      <div>
+        <p>${discountedPrice}</p>
         <h2>${listPrice}</h2>
       </div>
       <p>{description}</p>

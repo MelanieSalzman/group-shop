@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "postcss-modules": "^4.0.0",
     "standard": "^16.0.3"
   }
 }

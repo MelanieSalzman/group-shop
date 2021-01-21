@@ -1,10 +1,11 @@
 import React from 'react'
-import './styles.css'
 import PropTypes from 'prop-types'
+
+import classes from './styles.module.css'
 
 const CountdownTimer = ({ timeLeft }) => {
   return (
-    <div className='timer'>
+    <div className={classes.timer}>
       {timeLeft}
     </div>
   )

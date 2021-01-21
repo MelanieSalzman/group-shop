@@ -1,9 +1,10 @@
 import React from 'react'
-import './styles.css'
+
+import './styles.module.css'
 
 const Logo = () => {
   return (
-    <img src='https://placehold.co/205x34' alt='logo' className='logo' />
+    <img src='https://placehold.co/205x34' alt='' />
   )
 }
 
