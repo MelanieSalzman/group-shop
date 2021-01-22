@@ -35,6 +35,7 @@ const CountdownTimerContainer = ({ expirationDate }) => {
 const getTimeLeftInDuration = (expirationDate) => {
   const expiration = dayjs(expirationDate)
   const now = dayjs()
+
   return dayjs.duration(expiration.diff(now))
 }
 
@@ -44,6 +45,7 @@ const getDurationTimeInHHMMSSFormat = (timeLeftInDuration) => {
 
 const getRelativeTimeToExpirationTime = (expirationTime) => {
   const now = dayjs()
+
   return dayjs(now).to(expirationTime)
 }
 
@@ -54,7 +56,7 @@ dayjs.extend(updateLocale)
 dayjs.updateLocale('en', {
   relativeTime: {
     future: '%s',
-    past: 'Hace %s ago',
+    past: 'Hace %s',
     s: 'unos segundos',
     m: 'un minuto',
     mm: '%d minutos',
