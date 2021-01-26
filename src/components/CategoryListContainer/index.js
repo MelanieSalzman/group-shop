@@ -1,35 +1,17 @@
 import React, { Fragment } from 'react'
-import './styles.css'
-import ProductListContainer from '../ProductListContainer'
 
-const fakeCategoryList = [
-  {
-    categoryTitle: 'Última chance!',
-    productIds: [1, 2, 3, 4]
-  },
-  {
-    categoryTitle: 'Los más populares',
-    productIds: [1, 2, 3, 4]
-  },
-  {
-    categoryTitle: 'Compra en dúo',
-    productIds: [1, 2, 3, 4]
-  },
-  {
-    categoryTitle: 'Grupos pequeños',
-    productIds: [1, 2, 3, 4]
-  },
-  {
-    categoryTitle: 'Grupos grandes',
-    productIds: [1, 2, 3, 4]
-  }
-]
+import ProductListContainer from '../ProductListContainer'
+import useCategoryList from '../../hooks/useCategoryList'
+
+import classes from './styles.module.css'
 
 const CategoryListContainer = () => {
+  const categoryList = useCategoryList()
+
   return (
-    <div className='categoryListContainer'>
+    <div className={classes.categoryListContainer}>
       {
-        fakeCategoryList.map(({ categoryTitle, productIds }, index) => {
+        categoryList.map(({ categoryTitle, productIds }, index) => {
           return (
             <Fragment key={index}>
               <h2>{categoryTitle}</h2>

@@ -1,10 +1,12 @@
 import React from 'react'
-import './styles.css'
+
 import banner from '../../assets/images/banner.svg'
+
+import classes from './styles.module.css'
 
 const Banner = () => {
   return (
-    <img src={banner} alt='banner' className='banner' />
+    <img src={banner} alt='banner' className={classes.banner} />
   )
 }
 

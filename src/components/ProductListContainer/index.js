@@ -1,111 +1,22 @@
 import React from 'react'
-import ProductCard from '../ProductCard'
-import './styles.css'
 import PropTypes from 'prop-types'
-import firstProductUrl from '../../assets/images/product1.svg'
-import secondProductUrl from '../../assets/images/product2.svg'
-import thirdProductUrl from '../../assets/images/product3.svg'
-import fourProductUrl from '../../assets/images/product4.svg'
 
-const fakeProductList = [
-  {
-    id: 1,
-    productPhotoURL: firstProductUrl,
-    listPrice: 100,
-    discountedPrice: 80,
-    description: 'Este es un producto',
-    colors: 'rojo, verde, negro',
-    occupancyPercentage: 50,
-    groupCapacity: 10,
-    suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
-    discountPercentage: 20
-  },
-  {
-    id: 2,
-    productPhotoURL: secondProductUrl,
-    listPrice: 100,
-    discountedPrice: 80,
-    description: 'Este es un producto',
-    colors: 'rojo, verde, negro',
-    occupancyPercentage: 50,
-    groupCapacity: 10,
-    suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
-    discountPercentage: 20
-  },
-  {
-    id: 3,
-    productPhotoURL: thirdProductUrl,
-    listPrice: 100,
-    discountedPrice: 80,
-    description: 'Este es un producto',
-    colors: 'rojo, verde, negro',
-    occupancyPercentage: 50,
-    groupCapacity: 10,
-    suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
-    discountPercentage: 20
-  },
-  {
-    id: 4,
-    productPhotoURL: fourProductUrl,
-    listPrice: 100,
-    discountedPrice: 80,
-    description: 'Este es un producto',
-    colors: 'rojo, verde, negro',
-    occupancyPercentage: 50,
-    groupCapacity: 10,
-    suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
-    discountPercentage: 20
-  },
-  {
-    id: 5,
-    productPhotoURL: fourProductUrl,
-    listPrice: 100,
-    discountedPrice: 80,
-    description: 'Este es un producto',
-    colors: 'rojo, verde, negro',
-    occupancyPercentage: 50,
-    groupCapacity: 10,
-    suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
-    discountPercentage: 20
-  },
-  {
-    id: 6,
-    productPhotoURL: fourProductUrl,
-    listPrice: 100,
-    discountedPrice: 80,
-    description: 'Este es un producto',
-    colors: 'rojo, verde, negro',
-    occupancyPercentage: 50,
-    groupCapacity: 10,
-    suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
-    discountPercentage: 20
-  },
-  {
-    id: 7,
-    productPhotoURL: fourProductUrl,
-    listPrice: 100,
-    discountedPrice: 80,
-    description: 'Este es un producto',
-    colors: 'rojo, verde, negro',
-    occupancyPercentage: 50,
-    groupCapacity: 10,
-    suscriptorsNumber: 5,
-    expirationDate: new Date().toLocaleTimeString(),
-    discountPercentage: 20
-  }
-]
+import ProductCard from '../ProductCard'
+import useProductList from '../../hooks/useProductList'
+
+import classes from './styles.module.css'
 
 const ProductListContainer = ({ productIds, featuredProductId }) => {
+  const productList = useProductList()
+
+  const getProductsFilteredById = (productIds) => {
+    return productList.filter(product => productIds.includes(product.id))
+  }
   return (
-    <div className='cards'>
+    <div className={classes.cards}>
       {
-        fakeProductList.map(({
+
+        getProductsFilteredById(productIds).map(({
           id,
           productPhotoURL,
           listPrice,
@@ -131,7 +42,7 @@ const ProductListContainer = ({ productIds, featuredProductId }) => {
             expirationDate={expirationDate}
             discountPercentage={discountPercentage}
             extended={id === featuredProductId}
-            className='productCard'
+            className={classes.productCard}
           />))
       }
     </div>
@@ -139,7 +50,7 @@ const ProductListContainer = ({ productIds, featuredProductId }) => {
 }
 
 ProductListContainer.propTypes = {
-  productIds: PropTypes.arrayOf(PropTypes.number),
+  productIds: PropTypes.arrayOf(PropTypes.string),
   featuredProductId: PropTypes.number
 }
 

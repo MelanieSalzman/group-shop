@@ -1,15 +1,16 @@
 import React from 'react'
-import './styles.css'
 import { useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types'
+
+import classes from './styles.module.css'
 
 const NavbarLink = ({ path, text, iconSrc }) => {
   const history = useHistory()
 
   return (
-    <button onClick={() => history.push(path)} className='link'>
-      {text || null}
-      {iconSrc ? <img src={iconSrc} alt='Imagen' /> : null}
+    <button onClick={() => history.push(path)} className={classes.link}>
+      {text}
+      {iconSrc && <img src={iconSrc} alt='' />}
     </button>
   )
 }

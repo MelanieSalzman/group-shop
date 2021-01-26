@@ -1,8 +1,10 @@
 import React from 'react'
-import GroupOccupancy from '../GroupOccupancy'
-import Timer from '../Timer'
-import './styles.css'
 import PropTypes from 'prop-types'
+
+import GroupOccupancy from '../GroupOccupancy'
+import CountdownTimerContainer from '../CountdownTimerContainer'
+
+import classes from './styles.module.css'
 
 const ProductCard = ({
   productPhotoURL,
@@ -18,24 +20,24 @@ const ProductCard = ({
   extended
 }) => {
   return (
-    <div className='productCard'>
-      <div className='imageContainer'>
-        <img src={productPhotoURL} alt='Product' className='productImage' />
-        <div className='timerContainer'>
-          <Timer expirationDate={expirationDate} />
+    <div className={classes.productCard}>
+      <div className={classes.imageContainer}>
+        <img src={productPhotoURL} alt='Product' className={classes.productImage} />
+        <div className={classes.timerContainer}>
+          <CountdownTimerContainer expirationDate={expirationDate} />
         </div>
-        <div className='discountBadge'>
-          <p className='discountText'>Hasta un</p>
-          <p className='discountPercentage'>{discountPercentage} %</p>
+        <div className={classes.discountBadge}>
+          <p className={classes.discountText}>Hasta un</p>
+          <p className={classes.discountPercentage}>{discountPercentage} %</p>
         </div>
       </div>
-      <div className='productDetails'>
-        <div className='cost'>
-          <p className='discountedPrice'>${discountedPrice}</p>
-          <p className='listPrice'>${listPrice}</p>
+      <div className={classes.productDetails}>
+        <div className={classes.cost}>
+          <p className={classes.discountedPrice}>${discountedPrice}</p>
+          <p className={classes.listPrice}>${listPrice}</p>
         </div>
         <p>{description}</p>
-        <p className='colors'>Color: {colors}</p>
+        <p className={classes.colors}>Color: {colors}</p>
         <GroupOccupancy groupCapacity={groupCapacity} suscriptorsNumber={suscriptorsNumber} occupancyPercentage={occupancyPercentage} />
       </div>
     </div>

@@ -1,8 +1,9 @@
 import React from 'react'
-import './styles.css'
 import PropTypes from 'prop-types'
 import personFilled from '../../assets/images/person-filled.svg'
 import personOutlined from '../../assets/images/person-outlined.svg'
+
+import classes from './styles.module.css'
 
 const GroupOccupancy = ({
   occupancyPercentage,
@@ -24,18 +25,18 @@ const GroupOccupancy = ({
       <div>
         {
           suscriptorsNumberArray.map((suscriptor, index) => {
-            return (<img key={index} src={personFilled} alt='person' className='peopleImage' />)
+            return (<img key={index} src={personFilled} alt='person' className={classes.peopleImage} />)
           })
         }
         {
           remainingSuscriptorsArray.map((suscriptor, index) => {
-            return (<img key={index} src={personOutlined} alt='personOutlined' className='peopleImage' />)
+            return (<img key={index} src={personOutlined} alt='personOutlined' className={classes.peopleImage} />)
           })
         }
       </div>
-      <div className='occupancyStatus'>
-        <p className='occupancyPercentage'>{occupancyPercentage} %</p>
-        <p className='suscriptorStatus'>{suscriptorsNumber}/{groupCapacity} agrupados</p>
+      <div className={classes.occupancyStatus}>
+        <p className={classes.occupancyPercentage}>{occupancyPercentage} %</p>
+        <p className={classes.suscriptorStatus}>{suscriptorsNumber}/{groupCapacity} agrupados</p>
       </div>
     </div>
   )
