@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import GroupOccupancy from '../GroupOccupancy'
 import CountdownTimerContainer from '../CountdownTimerContainer'
 
-import classes from './styles.module.css'
+import classes from './styles.module.scss'
 
 const ProductCard = ({
   productPhotoURL,

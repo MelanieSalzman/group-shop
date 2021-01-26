@@ -71,6 +71,32 @@ const useProductList = () => {
       suscriptorsNumber: 5,
       expirationDate: dayjs().add(1, 'month').toISOString(),
       discountPercentage: 20
+    },
+    {
+      id: '6',
+      productPhotoURL: fourProductUrl,
+      listPrice: 100,
+      discountedPrice: 80,
+      description: 'Este es un producto',
+      colors: 'rojo, verde, negro',
+      occupancyPercentage: 50,
+      groupCapacity: 10,
+      suscriptorsNumber: 5,
+      expirationDate: dayjs().add(1, 'month').toISOString(),
+      discountPercentage: 20
+    },
+    {
+      id: '7',
+      productPhotoURL: fourProductUrl,
+      listPrice: 100,
+      discountedPrice: 80,
+      description: 'Este es un producto',
+      colors: 'rojo, verde, negro',
+      occupancyPercentage: 50,
+      groupCapacity: 10,
+      suscriptorsNumber: 5,
+      expirationDate: dayjs().add(1, 'month').toISOString(),
+      discountPercentage: 20
     }
   ]
 }

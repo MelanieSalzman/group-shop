@@ -3,10 +3,9 @@ import React, { useState, Fragment } from 'react'
 import DropDown from '../DropDown'
 import NavbarLink from '../NavbarLink'
 import Logo from '../Logo'
-import './styles.css'
 import shoppingCart from '../../assets/images/shopping-cart.svg'
 
-import classes from './styles.module.css'
+import classes from './styles.module.scss'
 
 const Navbar = () => {
   const [logged] = useState(false)

@@ -2,7 +2,7 @@ import React from 'react'
 
 import banner from '../../assets/images/banner.svg'
 
-import classes from './styles.module.css'
+import classes from './styles.module.scss'
 
 const Banner = () => {
   return (

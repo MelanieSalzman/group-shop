@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './styles.module.css'
+import './styles.module.scss'
 
 const DropDown = ({ onClick, className, text, children }) => {
   return (

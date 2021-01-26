@@ -7,7 +7,7 @@ import updateLocale from 'dayjs/plugin/updateLocale'
 
 import CountdownTimer from '../CountdownTimer'
 
-import './styles.module.css'
+import './styles.module.scss'
 
 const getFormattedTimeLeft = (expirationDate) => {
   const timeLeftInDuration = getTimeLeftInDuration(expirationDate)

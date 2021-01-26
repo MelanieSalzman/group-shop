@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import personFilled from '../../assets/images/person-filled.svg'
 import personOutlined from '../../assets/images/person-outlined.svg'
 
-import classes from './styles.module.css'
+import classes from './styles.module.scss'
 
 const GroupOccupancy = ({
   occupancyPercentage,

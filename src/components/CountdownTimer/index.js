@@ -1,12 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import classes from './styles.module.css'
+import clock from '../../assets/images/clock.svg'
+
+import classes from './styles.module.scss'
 
 const CountdownTimer = ({ timeLeft }) => {
   return (
     <div className={classes.timer}>
-      {timeLeft}
+      <img src={clock} alt='clock' className='clock' />
+      <p className='remainingTime'>{timeLeft}</p>
     </div>
   )
 }

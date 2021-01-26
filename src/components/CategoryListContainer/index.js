@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 import ProductListContainer from '../ProductListContainer'
 import useCategoryList from '../../hooks/useCategoryList'
 
-import classes from './styles.module.css'
+import classes from './styles.module.scss'
 
 const CategoryListContainer = () => {
   const categoryList = useCategoryList()
