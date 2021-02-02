@@ -8,8 +8,8 @@ import classes from './styles.module.scss'
 const CountdownTimer = ({ timeLeft }) => {
   return (
     <div className={classes.timer}>
-      <img src={clock} alt='clock' className='clock' />
-      <p className='remainingTime'>{timeLeft}</p>
+      <img src={clock} alt='' className={classes.remainingTime} />
+      {timeLeft}
     </div>
   )
 }

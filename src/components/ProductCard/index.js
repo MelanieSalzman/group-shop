@@ -27,7 +27,7 @@ const ProductCard = ({
           <CountdownTimerContainer expirationDate={expirationDate} />
         </div>
         <div className={classes.discountBadge}>
-          <p className={classes.discountText}>Hasta un</p>
+          Hasta un
           <p className={classes.discountPercentage}>{discountPercentage} %</p>
         </div>
       </div>

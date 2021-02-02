@@ -10,28 +10,18 @@ const GroupOccupancy = ({
   groupCapacity,
   suscriptorsNumber
 }) => {
-  const suscriptorsNumberArray = new Array(suscriptorsNumber)
-  for (let index = 0; index < suscriptorsNumber; index++) {
-    suscriptorsNumberArray.push(0)
-  }
-
-  const remainingSuscriptorsArray = new Array(groupCapacity - suscriptorsNumber)
-  for (let index = 0; index < (groupCapacity - suscriptorsNumber); index++) {
-    remainingSuscriptorsArray.push(0)
-  }
-
   return (
     <div>
       <div>
         {
-          suscriptorsNumberArray.map((suscriptor, index) => {
-            return (<img key={index} src={personFilled} alt='person' className={classes.peopleImage} />)
-          })
-        }
-        {
-          remainingSuscriptorsArray.map((suscriptor, index) => {
-            return (<img key={index} src={personOutlined} alt='personOutlined' className={classes.peopleImage} />)
-          })
+          Array(10).fill(0).map((val, i) => (
+            <img
+              key={i}
+              src={i < suscriptorsNumber ? personFilled : personOutlined}
+              alt=''
+              className={classes.peopleImage}
+            />
+          ))
         }
       </div>
       <div className={classes.occupancyStatus}>

@@ -12,29 +12,31 @@ const Navbar = () => {
 
   return (
     <nav className={classes.navbar}>
-      <Logo />
-      {logged
-        ? <LoggedInLinks />
-        : <Links />}
+      <Logo className={classes.logo} />
+      <div className={classes.links}>
+        {logged
+          ? <LoggedInLinks />
+          : <Links />}
+      </div>
     </nav>
   )
 }
 
 const Links = () => (
-  <Fragment className={classes.links}>
+  <>
     <NavbarLink text='Creá tu cuenta' path='#' />
     <NavbarLink text='Ingresá a tu cuenta' path='#' />
     <NavbarLink path='#' iconSrc={shoppingCart} />
-  </Fragment>
+  </>
 )
 
 const LoggedInLinks = () => (
-  <Fragment className={classes.links}>
+  <>
     <NavbarLink text='Quiero Vender' path='#' />
     <DropDown text='Usuario' path='#' />
     <NavbarLink text='Notificaciones' path='#' />
     <NavbarLink text='Carrito' path='#' />
-  </Fragment>
+  </>
 )
 
 export default Navbar
