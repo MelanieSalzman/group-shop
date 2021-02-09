@@ -1,4 +1,54 @@
-.banner{
-  width: 100%;
-  height: auto;
+.banner {
+  padding: 41px 68px 0px 68px;
+  position: relative;
+  background-color: white;
+  background-image: url("../../assets/images/grey-wave.svg");
+  background-repeat: no-repeat;
+  background-size: 1534px auto;
+  background-position: center bottom;
+}
+
+.featuresList {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #5c6163;
+  margin-top: 110px;
+  margin-left: 41px;
+  margin-right: 41px;flex-wrap: wrap;
+}
+
+ul li:first-child {
+  list-style-image: url("../../assets/images/target-icon.svg");
+}
+
+ul li:nth-child(2) {
+  list-style-image: url("../../assets/images/people-icon.svg");
+}
+
+ul li:nth-child(3) {
+  list-style-image: url("../../assets/images/social-cart-icon.svg");
+}
+
+ul li:nth-child(4) {
+  list-style-image: url("../../assets/images/package-icon.svg");
+}
+
+h1 {
+  font-style: normal;
+  font-weight: normal;
+  color: #3561d1;
+  font-size: 45px;
+}
+
+h2 {
+  color: #5c6163;
+  font-size: 24px;
+}
+
+.peopleBanner {
+  position: absolute;
+  height: 240px;
+  left: 805px;
+  top: 7px;
 }

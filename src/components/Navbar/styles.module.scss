@@ -1,13 +1,112 @@
-.navbar {
-  display: flex;
-  flex-direction: row;
-  height: 76px;
-  padding: 0 75px;
-  background-color: white;
-  justify-content: space-between;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    height: 76px;
+    padding: 0 75px;
+    background-color: white;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .link {
+    width: 100%;
+  }
 }
 
-.links{
-  display: flex;
-  justify-content: flex-end;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    height: 76px;
+    padding: 0 75px;
+    background-color: white;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .link {
+    width: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    height: 76px;
+    padding: 0 75px;
+    background-color: white;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    height: 76px;
+    padding: 0 75px;
+    background-color: white;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    height: 76px;
+    padding: 0 75px;
+    background-color: white;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }

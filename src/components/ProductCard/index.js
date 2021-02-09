@@ -27,16 +27,16 @@ const ProductCard = ({
           <CountdownTimerContainer expirationDate={expirationDate} />
         </div>
         <div className={classes.discountBadge}>
-          Hasta un
-          <p className={classes.discountPercentage}>{discountPercentage} %</p>
+          <span className={classes.discountText}>Hasta un</span>
+          <span className={classes.discountPercentage}>{discountPercentage} %</span>
         </div>
       </div>
       <div className={classes.productDetails}>
         <div className={classes.cost}>
-          <p className={classes.discountedPrice}>${discountedPrice}</p>
-          <p className={classes.listPrice}>${listPrice}</p>
+          <span className={classes.discountedPrice}>${discountedPrice}</span>
+          <span className={classes.listPrice}>${listPrice}</span>
         </div>
-        <p>{description}</p>
+        <p className={classes.description}>{description}</p>
         <p className={classes.colors}>Color: {colors}</p>
         <GroupOccupancy groupCapacity={groupCapacity} suscriptorsNumber={suscriptorsNumber} occupancyPercentage={occupancyPercentage} />
       </div>
@@ -55,7 +55,7 @@ ProductCard.propTypes = {
   suscriptorsNumber: PropTypes.number,
   expirationDate: PropTypes.string,
   discountPercentage: PropTypes.number,
-  exteded: PropTypes.bool
+  extended: PropTypes.bool
 }
 
 export default ProductCard

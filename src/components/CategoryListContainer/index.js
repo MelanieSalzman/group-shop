@@ -11,11 +11,11 @@ const CategoryListContainer = () => {
   return (
     <div className={classes.categoryListContainer}>
       {
-        categoryList.map(({ categoryTitle, productIds }, index) => {
+        categoryList.map(({ categoryTitle, productIds, extended }, index) => {
           return (
             <Fragment key={index}>
               <h2>{categoryTitle}</h2>
-              <ProductListContainer productIds={productIds} />
+              <ProductListContainer productIds={productIds} extended={extended} />
             </Fragment>
           )
         })

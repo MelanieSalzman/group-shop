@@ -24,18 +24,18 @@ const Navbar = () => {
 
 const Links = () => (
   <>
-    <NavbarLink text='Creá tu cuenta' path='#' />
-    <NavbarLink text='Ingresá a tu cuenta' path='#' />
-    <NavbarLink path='#' iconSrc={shoppingCart} />
+    <NavbarLink text='Creá tu cuenta' path='#' className={classes.link} />
+    <NavbarLink text='Ingresá a tu cuenta' path='#' className={classes.link} />
+    <NavbarLink path='#' iconSrc={shoppingCart} className={classes.link} />
   </>
 )
 
 const LoggedInLinks = () => (
   <>
-    <NavbarLink text='Quiero Vender' path='#' />
-    <DropDown text='Usuario' path='#' />
-    <NavbarLink text='Notificaciones' path='#' />
-    <NavbarLink text='Carrito' path='#' />
+    <NavbarLink text='Quiero Vender' path='#' className={classes.link} />
+    <DropDown text='Usuario' path='#' className={classes.link} />
+    <NavbarLink text='Notificaciones' path='#' className={classes.link} />
+    <NavbarLink text='Carrito' path='#' className={classes.link} />
   </>
 )
 
