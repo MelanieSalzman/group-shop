@@ -6,15 +6,16 @@
   margin-right: 9px;
 }
 
-.suscriptorStatus {
-  font-size: 12px;
-  color: gray;
-}
-
-.occupancyPercentage {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  color: orangered;
-  padding-right: 8px;
+.occupancyStatus {
+  & > p:nth-child(1) {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #FF4F17;
+    padding-right: 8px;
+  }
+  & > p:nth-child(2) {
+    font-size: 12px;
+    color: gray;
+  }
 }

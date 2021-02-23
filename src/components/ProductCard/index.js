@@ -5,6 +5,7 @@ import GroupOccupancy from '../GroupOccupancy'
 import CountdownTimerContainer from '../CountdownTimerContainer'
 
 import classes from './styles.module.scss'
+import classnames from 'classnames'
 
 const ProductCard = ({
   productPhotoURL,
@@ -20,21 +21,25 @@ const ProductCard = ({
   extended
 }) => {
   return (
-    <div className={classes.productCard}>
+    <div className={classnames({
+      [classes.extendedProductCard]: extended,
+      [classes.productCard]: !extended
+    })}
+    >
       <div className={classes.imageContainer}>
         <img src={productPhotoURL} alt='Product' className={classes.productImage} />
         <div className={classes.timerContainer}>
           <CountdownTimerContainer expirationDate={expirationDate} />
         </div>
         <div className={classes.discountBadge}>
-          <span className={classes.discountText}>Hasta un</span>
-          <span className={classes.discountPercentage}>{discountPercentage} %</span>
+          <span>Hasta un</span>
+          <span>{discountPercentage} %</span>
         </div>
       </div>
       <div className={classes.productDetails}>
         <div className={classes.cost}>
-          <span className={classes.discountedPrice}>${discountedPrice}</span>
-          <span className={classes.listPrice}>${listPrice}</span>
+          <span>${discountedPrice}</span>
+          <span>${listPrice}</span>
         </div>
         <p className={classes.description}>{description}</p>
         <p className={classes.colors}>Color: {colors}</p>

@@ -1,9 +1,9 @@
 import dayjs from 'dayjs'
 
-import firstProductUrl from '../assets/images/product1.svg'
-import secondProductUrl from '../assets/images/product2.svg'
-import thirdProductUrl from '../assets/images/product3.svg'
-import fourProductUrl from '../assets/images/product4.svg'
+import firstProductUrl from '../assets/images/fake_products/product1.svg'
+import secondProductUrl from '../assets/images/fake_products/product2.svg'
+import thirdProductUrl from '../assets/images/fake_products/product3.svg'
+import fourProductUrl from '../assets/images/fake_products/product4.svg'
 
 const useProductList = () => {
   return [

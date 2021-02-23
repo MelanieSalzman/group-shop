@@ -33,33 +33,35 @@
   padding: 8px 0px;
 }
 
-.discountText{
-  font-size: 12px;
+.discountBadge {
+  & > span:nth-child(1) {
+    font-size: 12px;
+  }
+  & > span:nth-child(2) {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 
-.discountPercentage {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
+.cost {
+  & > span:nth-child(1) {
+    font-size: 16px;
+    text-decoration-line: line-through;
+    color: gray;
+    padding-right: 12px;
+  }
+  & > span:nth-child(2) {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+  }
 }
 
 .cost {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.discountedPrice {
-  font-size: 16px;
-  text-decoration-line: line-through;
-  color: gray;
-  padding-right: 12px;
-}
-
-.listPrice {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
 }
 
 .colors {
@@ -69,8 +71,7 @@
   margin-bottom: 20px;
 }
 
-.description{
-  margin: 0;
-    margin-top: 10px;
-    margin-bottom: 2px;
-   }
+.description {
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
