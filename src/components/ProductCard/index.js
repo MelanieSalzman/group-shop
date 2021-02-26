@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 import GroupOccupancy from '../GroupOccupancy'
 import CountdownTimerContainer from '../CountdownTimerContainer'
 
-import './styles.module.css'
+import classes from './styles.module.scss'
+import classnames from 'classnames'
 
 const ProductCard = ({
   productPhotoURL,
@@ -20,20 +21,30 @@ const ProductCard = ({
   extended
 }) => {
   return (
-    <div>
-      <img src={productPhotoURL} alt='' />
-      <CountdownTimerContainer expirationDate={expirationDate} />
-      <div>
-        <h6>Hasta un</h6>
-        <h4>{discountPercentage} %</h4>
+    <div className={classnames({
+      [classes.extendedProductCard]: extended,
+      [classes.productCard]: !extended
+    })}
+    >
+      <div className={classes.imageContainer}>
+        <img src={productPhotoURL} alt='Product' className={classes.productImage} />
+        <div className={classes.timerContainer}>
+          <CountdownTimerContainer expirationDate={expirationDate} />
+        </div>
+        <div className={classes.discountBadge}>
+          <span>Hasta un</span>
+          <span>{discountPercentage} %</span>
+        </div>
       </div>
-      <div>
-        <p>${discountedPrice}</p>
-        <h2>${listPrice}</h2>
+      <div className={classes.productDetails}>
+        <div className={classes.cost}>
+          <span>${discountedPrice}</span>
+          <span>${listPrice}</span>
+        </div>
+        <p className={classes.description}>{description}</p>
+        <p className={classes.colors}>Color: {colors}</p>
+        <GroupOccupancy groupCapacity={groupCapacity} suscriptorsNumber={suscriptorsNumber} occupancyPercentage={occupancyPercentage} />
       </div>
-      <p>{description}</p>
-      Color: {colors}
-      <GroupOccupancy groupCapacity={groupCapacity} suscriptorsNumber={suscriptorsNumber} occupancyPercentage={occupancyPercentage} />
     </div>
   )
 }
@@ -49,7 +60,7 @@ ProductCard.propTypes = {
   suscriptorsNumber: PropTypes.number,
   expirationDate: PropTypes.string,
   discountPercentage: PropTypes.number,
-  exteded: PropTypes.bool
+  extended: PropTypes.bool
 }
 
 export default ProductCard

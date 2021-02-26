@@ -1,7 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { times } from 'lodash'
 
-import './styles.module.css'
+import personFilled from '../../assets/images/person-filled.svg'
+import personOutlined from '../../assets/images/person-outlined.svg'
+
+import classes from './styles.module.scss'
 
 const GroupOccupancy = ({
   occupancyPercentage,
@@ -10,8 +14,22 @@ const GroupOccupancy = ({
 }) => {
   return (
     <div>
-      <h5>{occupancyPercentage} %</h5>
-      <h5>{suscriptorsNumber}/{groupCapacity} agrupados</h5>
+      <div>
+        {
+          times(10).map((val, i) => (
+            <img
+              key={i}
+              src={i < suscriptorsNumber ? personFilled : personOutlined}
+              alt=''
+              className={classes.peopleImage}
+            />
+          ))
+        }
+      </div>
+      <div className={classes.occupancyStatus}>
+        <p>{occupancyPercentage} %</p>
+        <p>{suscriptorsNumber}/{groupCapacity} agrupados</p>
+      </div>
     </div>
   )
 }

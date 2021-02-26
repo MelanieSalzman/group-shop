@@ -3,37 +3,40 @@ import React, { useState, Fragment } from 'react'
 import DropDown from '../DropDown'
 import NavbarLink from '../NavbarLink'
 import Logo from '../Logo'
+import shoppingCart from '../../assets/images/shopping-cart.svg'
 
-import classes from './styles.module.css'
+import classes from './styles.module.scss'
 
 const Navbar = () => {
   const [logged] = useState(false)
 
   return (
     <nav className={classes.navbar}>
-      <Logo />
-      {logged
-        ? <LoggedInLinks />
-        : <Links />}
+      <Logo className={classes.logo} />
+      <div className={classes.links}>
+        {logged
+          ? <LoggedInLinks />
+          : <Links />}
+      </div>
     </nav>
   )
 }
 
 const Links = () => (
-  <Fragment className={classes.links}>
-    <NavbarLink text='Creá tu cuenta' path='#' />
-    <NavbarLink text='Ingresá a tu cuenta' path='#' />
-    <NavbarLink path='#' iconSrc='https://placehold.co/22x22' />
-  </Fragment>
+  <>
+    <NavbarLink text='Creá tu cuenta' path='#' className={classes.link} />
+    <NavbarLink text='Ingresá a tu cuenta' path='#' className={classes.link} />
+    <NavbarLink path='#' iconSrc={shoppingCart} className={classes.link} />
+  </>
 )
 
 const LoggedInLinks = () => (
-  <Fragment className={classes.links}>
-    <NavbarLink text='Quiero Vender' path='#' />
-    <DropDown text='Usuario' path='#' />
-    <NavbarLink text='Notificaciones' path='#' />
-    <NavbarLink text='Carrito' path='#' />
-  </Fragment>
+  <>
+    <NavbarLink text='Quiero Vender' path='#' className={classes.link} />
+    <DropDown text='Usuario' path='#' className={classes.link} />
+    <NavbarLink text='Notificaciones' path='#' className={classes.link} />
+    <NavbarLink text='Carrito' path='#' className={classes.link} />
+  </>
 )
 
 export default Navbar

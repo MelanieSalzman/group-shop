@@ -1,13 +1,18 @@
 import dayjs from 'dayjs'
 
+import firstProductUrl from '../assets/images/fake_products/product1.svg'
+import secondProductUrl from '../assets/images/fake_products/product2.svg'
+import thirdProductUrl from '../assets/images/fake_products/product3.svg'
+import fourProductUrl from '../assets/images/fake_products/product4.svg'
+
 const useProductList = () => {
   return [
     {
       id: '1',
-      productPhotoURL: 'https://placehold.co/308x210',
+      productPhotoURL: firstProductUrl,
       listPrice: 100,
       discountedPrice: 80,
-      description: 'Este es un producto',
+      description: 'Ornare quam tellus sit sed lobortis eu, vulputate. Consectetur.',
       colors: 'rojo, verde, negro',
       occupancyPercentage: 50,
       groupCapacity: 10,
@@ -17,10 +22,10 @@ const useProductList = () => {
     },
     {
       id: '2',
-      productPhotoURL: 'https://placehold.co/308x210',
+      productPhotoURL: secondProductUrl,
       listPrice: 100,
       discountedPrice: 80,
-      description: 'Este es un producto',
+      description: 'Libero porttitor pretium urna, molestie ut lorem pharetra. Lacus.',
       colors: 'rojo, verde, negro',
       occupancyPercentage: 50,
       groupCapacity: 10,
@@ -30,10 +35,10 @@ const useProductList = () => {
     },
     {
       id: '3',
-      productPhotoURL: 'https://placehold.co/308x210',
+      productPhotoURL: thirdProductUrl,
       listPrice: 100,
       discountedPrice: 80,
-      description: 'Este es un producto',
+      description: 'Quis placerat sollicitudin dui, malesuada. Ullamcorper ut arcu et.',
       colors: 'rojo, verde, negro',
       occupancyPercentage: 50,
       groupCapacity: 10,
@@ -43,10 +48,10 @@ const useProductList = () => {
     },
     {
       id: '4',
-      productPhotoURL: 'https://placehold.co/308x210',
+      productPhotoURL: fourProductUrl,
       listPrice: 100,
       discountedPrice: 80,
-      description: 'Este es un producto',
+      description: 'Vel eu consequat, aliquet dolor sodales. Purus nunc in duis diam.',
       colors: 'rojo, verde, negro',
       occupancyPercentage: 50,
       groupCapacity: 10,
@@ -56,10 +61,36 @@ const useProductList = () => {
     },
     {
       id: '5',
-      productPhotoURL: 'https://placehold.co/308x210',
+      productPhotoURL: fourProductUrl,
       listPrice: 100,
       discountedPrice: 80,
-      description: 'Deberia aparecer en la primer lista y tercera',
+      description: 'Vel eu consequat, aliquet dolor sodales. Purus nunc in duis diam.',
+      colors: 'rojo, verde, negro',
+      occupancyPercentage: 50,
+      groupCapacity: 10,
+      suscriptorsNumber: 5,
+      expirationDate: dayjs().add(1, 'month').toISOString(),
+      discountPercentage: 20
+    },
+    {
+      id: '6',
+      productPhotoURL: fourProductUrl,
+      listPrice: 100,
+      discountedPrice: 80,
+      description: 'Vel eu consequat, aliquet dolor sodales. Purus nunc in duis diam.',
+      colors: 'rojo, verde, negro',
+      occupancyPercentage: 50,
+      groupCapacity: 10,
+      suscriptorsNumber: 5,
+      expirationDate: dayjs().add(1, 'month').toISOString(),
+      discountPercentage: 20
+    },
+    {
+      id: '7',
+      productPhotoURL: fourProductUrl,
+      listPrice: 100,
+      discountedPrice: 80,
+      description: 'Vel eu consequat, aliquet dolor sodales. Purus nunc in duis diam.',
       colors: 'rojo, verde, negro',
       occupancyPercentage: 50,
       groupCapacity: 10,

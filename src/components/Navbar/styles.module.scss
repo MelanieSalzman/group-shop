@@ -1,0 +1,31 @@
+@import "../../styles/media-queries.scss";
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  height: 76px;
+  padding: 0 75px;
+  background-color: white;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@include for-phone-only {
+  .link {
+    width: 100%;
+  }
+}
+
+@include for-tablet-up {
+  .link {
+    width: 100%;
+  }
+}

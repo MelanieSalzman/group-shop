@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
 
-import './styles.module.css'
+import './styles/global.scss'
 
 const App = () => {
   return (

@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import classes from './styles.module.css'
+import classes from './styles.module.scss'
 
 const NavbarLink = ({ path, text, iconSrc }) => {
   const history = useHistory()

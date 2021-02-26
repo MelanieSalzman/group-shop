@@ -1,0 +1,10 @@
+.cards {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin-bottom: 80px;
+}
+
+.productCard {
+  flex: 0 0 auto;
+}

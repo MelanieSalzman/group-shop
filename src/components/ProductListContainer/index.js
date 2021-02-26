@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 import ProductCard from '../ProductCard'
 import useProductList from '../../hooks/useProductList'
 
-import classes from './styles.module.css'
+import classes from './styles.module.scss'
 
-const ProductListContainer = ({ productIds, featuredProductId }) => {
+const ProductListContainer = ({ productIds, extended }) => {
   const productList = useProductList()
 
   const getProductsFilteredById = (productIds) => {
@@ -41,7 +41,8 @@ const ProductListContainer = ({ productIds, featuredProductId }) => {
             suscriptorsNumber={suscriptorsNumber}
             expirationDate={expirationDate}
             discountPercentage={discountPercentage}
-            extended={id === featuredProductId}
+            extended={false}
+            className={classes.productCard}
           />))
       }
     </div>
